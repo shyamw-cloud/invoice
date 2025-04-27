@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Invoice Form</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Travel Invoice Form</h2>
+        <form method="POST" action="/generate_invoice">
+            <label>Customer Name:</label>
+            <input type="text" name="customer_name" required>
+
+            <div class="row">
+                <div class="column">
+                    <label>Pickup Location:</label>
+                    <input type="text" name="pickup_location" required>
+                </div>
+                <div class="column">
+                    <label>Drop Location:</label>
+                    <input type="text" name="drop_location" required>
+                </div>
+            </div>
+
+            <label>Travel Date:</label>
+            <input type="date" name="travel_date" required>
+
+            <label>KM:</label>
+            <input type="number" step="0.01" name="km" required>
+
+            <label>Rate/KM:</label>
+            <input type="number" step="0.01" name="rate_per_km" required>
+
+            <label>Toll Charges:</label>
+            <input type="number" step="0.01" name="toll_charges" required>
+
+            <label>Driver Allowance:</label>
+            <input type="number" step="0.01" name="driver_allowance" required>
+
+            <button type="submit">Generate and Download PDF</button>
+        </form>
+    </div>
+</body>
+</html>
